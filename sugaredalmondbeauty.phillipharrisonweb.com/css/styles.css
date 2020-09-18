@@ -1,0 +1,551 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+.main-grid-container {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: auto;
+    grid-gap: 3rem;
+}
+
+
+/* change appearance of hamburger */
+label {
+    text-align: right;
+    display: block;
+    font-size: 6rem;
+    cursor: pointer;
+    color: #fff;
+    padding: 0;
+    
+}
+
+/* keep hidden until hamburger is clicked */
+#mobile-menu-container {
+    display: none;
+}
+
+
+/* define rules for ul */
+.menu {
+    list-style: none;
+    display:grid;
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    position: absolute;
+    z-index:10;
+}    
+/* define rules for individual li */
+.menu li {
+    
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.644); 
+}
+
+/* define rules for anchor tags */
+.menu li a {
+    padding: 25px 0;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+/* define rules for hover and active state */
+.menu li:hover {
+    background-color:rgba(80, 75, 75, 0.644);
+}
+
+.menu li:active {
+    background-color:rgba(80, 75, 75, 0.644);
+}
+
+.nav {
+    height: auto;
+}
+
+.menu .current-page {
+    color: grey;
+}
+
+
+/* change font colour on hover and active
+.menu li a:hover {
+    color: #fff;
+}
+
+.menu li a:active {
+    color: #fff;
+} */
+
+/* display mobile menu div when box is checked */
+#toggle:checked + #mobile-menu-container {
+    display: block;
+    
+}
+
+/* hide checkbox */
+#toggle {
+    display: none;
+}
+
+/* MAIN MENU LARGER SCREEN CSS */
+.large-screen-menu {
+    display: flex;   
+    justify-content: space-between;
+    height: auto;
+    align-items: center;
+    padding: 0 2%;
+}
+
+.large-screen-menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: all 0.3s ease 0;
+    padding: 0rem 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+}
+
+/* creates the separation between logo and menu items */
+.push {
+    margin-left: auto;
+}
+
+.large-screen-menu .home-icon img
+    {
+     height: 200px;
+     padding-top: 10px;
+    }
+
+.underline-effect::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+
+}
+
+.underline-effect:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+
+}
+
+.large-screen-menu .current-page  {
+    color: rgb(146, 145, 145);
+}
+
+/* END OF LARGE SCREEN MENU CSS */
+
+/* HEADER IMAGES FOR EACH PAGE */
+
+
+.home-page, .services-page, .bridal-page, .education-page {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+}
+
+.home-page {
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.897),
+        rgba(211, 211, 211, 0.575)),
+        url(../img/cosmetics-2746013_1920.jpg);
+}
+
+.services-page {
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.897),
+        rgba(211, 211, 211, 0.575)),
+        url(../img/version2-5202618_1920.jpg);
+        height: 75vh;
+}
+
+.bridal-page {
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.897),
+        rgba(211, 211, 211, 0.575)),
+        url(../img/beautiful-1846171_1920.jpg);
+        height: 75vh;
+}
+
+.contact-page {
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.897),
+        rgba(211, 211, 211, 0.575)),
+        url(../img/adult-3672564_1920.jpg);
+        height: 100vh;
+}
+
+
+/* CSS FOR PAGE HEADING */
+.main-page-title h1 {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    position: absolute;
+    top: 65%;
+    left: 2%;
+    text-align: left;
+    color: #fff;
+
+}
+
+/* FADE IN MAIN PAGE TITLE */
+
+.fade-in, .gallery-container, .services-price-list-container, .recording-page-gallery, .info-container p{
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+}@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
+}
+
+
+
+/* HOME PAGE GALLERY SECTION */
+.featured {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 3rem;
+    grid-gap: 1rem;
+
+}
+.featured li {
+    display: grid;
+    grid-template-rows: 2fr auto 2fr;
+}
+
+.featured .image {
+    grid-row: 1/4;
+    grid-column: 1;
+}
+
+.featured .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+.featured .card-header {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+
+}
+
+.featured .card-header a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+/* INFO SECTION */
+.info-container {
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.671),
+        rgba(80, 75, 75, 0.76)),
+        url(../img/roses-1420719_1920.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+}
+
+.info-container .bridal {
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.671),
+        rgba(95, 88, 88, 0.623)),
+        url(../img/makeup-2676392_1920.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+}
+
+.info-container p {
+    font-family: 'Montserrat', sans-serif;
+    padding: 2rem 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.rec-final-para {
+    padding-bottom: 6rem;
+}
+
+.mixing-info {
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.884),
+        rgba(95, 88, 88, 0.884)),
+        url(../img/vu-meter-70433_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* TABLE SECTION CSS */ 
+
+.services-price-list-container h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 3rem 1rem;
+
+
+}
+
+.price-list {
+    border-collapse: collapse;
+    width: 75%;
+    margin: auto;
+}
+.price-list td {
+        font-family: 'Montserrat', sans-serif;
+        border: 1px solid black;
+        background-color: rgba(112, 110, 110, 0.041);
+        padding: 0.6rem;
+        border-left: none;
+        border-right: none;
+}
+   
+.price-list .category-head {
+    font-weight: bold;
+    background-color: rgba(112, 110, 110, 0.267);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/* POSITION CONTENT IN CONTACT PAGE HEADER */
+
+
+.contact-info {
+    padding-top: 25vh;
+   text-align: center;
+   color: #fff;
+}
+.contact-info a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-info h3 {
+    font-size: 1rem;
+}
+
+/* FOOTER SECTION */
+
+footer .footer-menu {
+    display: flex;   
+    background-color: rgba(0, 0, 0, 0.295);
+    justify-content: space-evenly;
+    height: 2rem;
+    align-items: center;
+}
+
+footer .footer-menu  a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.6rem;
+}
+
+footer .footer-menu  a:hover {
+    color: grey;
+}
+
+footer p {
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+/* RECORDING PAGE */
+
+
+.recording-page-gallery .featured .card-header {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+
+}
+
+.recording-page-gallery .featured .card-header {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    font-size: 1.5rem;
+}
+
+/* EDUCATION PAGE */
+
+.education-page-gallery .featured .card-header {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+
+}
+
+.education-page-gallery .featured .card-header {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    font-size: 1.5rem;
+}
+
+/* enclose rules for larger screen sizes */
+
+@media (min-width: 801px) {
+    label {
+        display: none;
+    
+}
+    .menu {
+        display: none;
+    }
+
+    .featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px;
+    padding: 3rem;
+    grid-gap: 1rem;
+
+}
+    .main-page-title {
+        top: 50%;
+        left: 7%
+    }
+    .main-page-title h1 {
+        font-size: 5vw;
+    }
+
+    .info-container {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    padding-top: 5rem;
+    }
+
+    .info-container p {
+        font-weight: 300;
+        font-size: 1.4rem;
+        padding: 2rem 8rem;
+    
+    }
+    .info-container .final-para {
+        padding-bottom: 10rem;
+    }
+
+    /* adds clip path to header image */
+    .home-page, .recording-page, .mixing-page, .education-page{
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+    }
+
+    .price-list {
+        max-width: 60vw;
+    }
+    
+    footer .footer-menu  a {
+    font-size: 0.8rem;
+    }
+
+    .contact-info {
+    padding-top: 20vh;
+   text-align: center;
+   color: #fff;
+}
+.contact-info a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-info h3 {
+    font-size: 3rem;
+}
+
+
+}
+
+
+
+
+/* hides the horizontal nav at a max screen width of 760px */
+@media (max-width: 802px) {
+    .large-screen-menu {
+        display: none;
+    }
+}
